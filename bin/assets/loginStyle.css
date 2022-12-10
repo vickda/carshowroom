@@ -1,0 +1,16 @@
+.root {
+	-fx-background-color: rgba(0, 0, 0, 0.9);
+}
+
+#login_button{
+	-fx-background-color: white; 
+	-fx-background-radius:20px; 
+	-fx-cursor:hand
+}
+
+#login_button:hover{
+	-fx-background-color: black; 
+	-fx-text-fill: white; 
+	-fx-cursor:hand; 
+	-fx-background-radius:20px;
+}

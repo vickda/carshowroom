@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminHomeViewController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Users">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="userTableView" layoutX="213.0" layoutY="-1.0" prefHeight="526.0" prefWidth="482.0">
+                          <columns>
+                            <TableColumn fx:id="col_id" prefWidth="51.33338928222656" text="ID" />
+                            <TableColumn fx:id="col_fullName" prefWidth="94.66668701171875" text="Full_Name" />
+                              <TableColumn fx:id="col_email" prefWidth="143.3333740234375" text="Email" />
+                              <TableColumn fx:id="col_pass" prefWidth="109.99996948242188" text="Password" />
+                              <TableColumn fx:id="col_privilege" minWidth="9.5555419921875" prefWidth="78.66668701171875" text="Privilege" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="userId" layoutX="19.0" layoutY="18.0" prefHeight="44.0" prefWidth="171.0" promptText="ID">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="userFullName" layoutX="19.0" layoutY="84.0" prefHeight="44.0" prefWidth="171.0" promptText="Full Name">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="userEmail" layoutX="19.0" layoutY="150.0" prefHeight="44.0" prefWidth="171.0" promptText="Email">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="userPrivilege" layoutX="19.0" layoutY="269.0" prefHeight="44.0" prefWidth="171.0" promptText="Privilege">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="userAddBtn" layoutX="42.0" layoutY="333.0" mnemonicParsing="false" onAction="#BtnPressed" prefHeight="39.0" prefWidth="123.0" style="-fx-border-radius: 20px;" text="Add ">
+                           <font>
+                              <Font name="Book Antiqua" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="userUpdateBtn" layoutX="43.0" layoutY="389.0" mnemonicParsing="false" onAction="#BtnPressed" prefHeight="39.0" prefWidth="123.0" style="-fx-border-radius: 20px;" text="Update">
+                           <font>
+                              <Font name="Book Antiqua" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="userDeleteBtn" layoutX="43.0" layoutY="447.0" mnemonicParsing="false" onAction="#BtnPressed" prefHeight="39.0" prefWidth="123.0" text="Delete">
+                           <font>
+                              <Font name="Book Antiqua" size="20.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="userPass" layoutX="18.0" layoutY="208.0" prefHeight="44.0" prefWidth="171.0" promptText="Password">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Car Inventory">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="carTableView" layoutX="213.0" layoutY="-1.0" prefHeight="526.0" prefWidth="482.0">
+                           <columns>
+                              <TableColumn fx:id="col_carID" prefWidth="56.66670227050781" text="Car_ID" />
+                              <TableColumn fx:id="col_carYear" prefWidth="70.666748046875" text="Car_Year" />
+                              <TableColumn fx:id="col_carMake" prefWidth="161.33331298828125" text="Car_Make" />
+                              <TableColumn fx:id="col_carPrice" prefWidth="97.99996948242188" text="Car_Price" />
+                              <TableColumn fx:id="col_status" prefWidth="92.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="carId" layoutX="19.0" layoutY="18.0" prefHeight="44.0" prefWidth="171.0" promptText="Car ID">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="carYear" layoutX="19.0" layoutY="84.0" prefHeight="44.0" prefWidth="171.0" promptText="Car Year">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="carMake" layoutX="19.0" layoutY="150.0" prefHeight="44.0" prefWidth="171.0" promptText="Car Make">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="carPrice" layoutX="19.0" layoutY="215.0" prefHeight="44.0" prefWidth="171.0" promptText="Car Price">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="status" layoutX="19.0" layoutY="277.0" prefHeight="44.0" prefWidth="171.0" promptText="Status">
+                           <font>
+                              <Font name="Book Antiqua" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="carAddBtn" layoutX="42.0" layoutY="347.0" mnemonicParsing="false" onAction="#BtnPressed" prefHeight="39.0" prefWidth="123.0" style="-fx-border-radius: 20px;" text="Add ">
+                           <font>
+                              <Font name="Book Antiqua" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="carUpdateBtn" layoutX="43.0" layoutY="403.0" mnemonicParsing="false" onAction="#BtnPressed" prefHeight="39.0" prefWidth="123.0" style="-fx-border-radius: 20px;" text="Update">
+                           <font>
+                              <Font name="Book Antiqua" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="carDeleteBtn" layoutX="43.0" layoutY="461.0" mnemonicParsing="false" onAction="#BtnPressed" prefHeight="39.0" prefWidth="123.0" text="Delete">
+                           <font>
+                              <Font name="Book Antiqua" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+
+
+
+
+   </center>
+</BorderPane>
